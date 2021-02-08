@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>Интернет-магазин Техномарт</title>
 	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/tiny-slider.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -73,29 +74,32 @@
 					<b>Доставка</b>
 					<a href="#">Бесплатно</a>
 				</p>
-				<div class="promo-slider promo-slider-1">
-					<div class="top-slogan">
-						<h3>Дрели</h3>
-						<p>Соседям на радость!</p>
+				<div class="tiny-slider promo-slider">
+					<div class="promo-slider-1">
+						<div class="top-slogan">
+							<h3>Дрели</h3>
+							<p>Соседям на радость!</p>
+						</div>
+						<!--<div class="slider-controls">
+							<i class="active"></i>
+							<i></i>
+						</div>-->
+						<img src="img/promo-slider-img-1.jpg" width="620" height="266" alt="Дрели">
+						<!--<button class="promo-slider-button next">Вперед</button>
+						<button class="promo-slider-button previous">Назад</button>-->
+						<a class="button promo-button" href="catalog.html">Открыть каталог</a>
 					</div>
-					<div class="slider-controls">
-						<i class="active"></i>
-						<i></i>
+					<div class="promo-slider-2">
+						<div class="top-slogan">
+							<h3>Перфораторы</h3>
+							<p>Настоящие мужские игрушки</p>
+						</div>
+						<img src="img/promo-slider-img-2.jpg" width="620" height="266" alt="Перфораторы">
+						<!--<button class="promo-slider-button next">Вперед</button>
+						<button class="promo-slider-button previous">Назад</button>-->
+						<a class="button promo-button" href="catalog.html">Открыть каталог</a>
 					</div>
-					<img src="img/promo-slider-img-1.jpg" width="620" height="266" alt="Дрели">
-					<button class="promo-slider-button next">Вперед</button>
-					<button class="promo-slider-button previous">Назад</button>
-					<a class="button promo-button" href="catalog.html">Открыть каталог</a>
-				</div>
-				<div class="promo-slider promo-slider-2 visually-hidden">
-					<div class="top-slogan">
-						<h3>Перфораторы</h3>
-						<p>Настоящие мужские игрушки</p>
-					</div>
-					<img src="img/promo-slider-img-2.jpg" width="620" height="266" alt="Перфораторы">
-					<button class="promo-slider-button next">Вперед</button>
-					<button class="promo-slider-button previous">Назад</button>
-					<a class="button promo-button" href="catalog.html">Открыть каталог</a>
+
 				</div>
 			</section>
 
@@ -319,6 +323,7 @@
 		<button class="modal-close" type="button">Закрыть</button>
 	</section>
 
+<script src="js/tiny-slider.js"></script>
 <script src="js/popup.js"></script>
 </body>
 </html>

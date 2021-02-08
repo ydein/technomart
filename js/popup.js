@@ -94,6 +94,7 @@
 		mapPopup.classList.remove("modal-show");
 	});
 
+
 /*	
 	var addedLink = document.querySelector(".popular-goods-checkout");
 	var addedPopup = document.querySelector(".added");
@@ -118,3 +119,13 @@
 		}
 	});
 	*/
+
+	//Tiny-slider
+	  var slider = tns({
+    container: '.tiny-slider',
+    items: 1,
+    slideBy: 'page',
+    autoplay: true,
+    mode: "gallery",
+    controlsPosition: 'bottom'
+  });

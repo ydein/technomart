@@ -1,0 +1,76 @@
+.tns-outer [data-action] {
+  display: none;
+}
+.tns-outer [data-controls] {
+  position: absolute;
+  width: 22px;
+  height: 40px;
+  top: 275px;
+  cursor: pointer;
+  text-indent: -10000px;
+  outline: none;
+}
+.tns-outer [data-controls]:hover {
+  opacity: 0.5;
+}
+.tns-outer [data-controls="prev"] {
+  right: 350px;
+  background-color: transparent;
+  background-image: url(../img/arrow-next.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.tns-outer [data-controls="next"] {
+  left: 25px;
+   background-color: transparent;
+  background-image: url(../img/arrow-previous.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.tns-outer [data-action="stop"] {
+  display: none;
+}
+
+.tns-nav {
+  position: absolute;
+  left: 300px;
+  bottom: 20px;
+  z-index: 100;
+
+  max-width: : 300px;
+  height: 30px;
+
+  text-align: center;
+  font-size: 0;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+
+}
+.tns-nav-active::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  margin: -3px;
+
+  width: 6px;
+  height: 6px;
+
+  background-color: #ee3643;
+  border-radius: 50%;
+}
+.tns-nav [aria-controls="tns1"] {
+  position: relative;
+  display: inline-block;
+
+  margin-right: 4px;
+  margin-left: 4px;
+
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 5px;
+}
