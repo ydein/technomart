@@ -1621,7 +1621,15 @@ li.popular-manufacturer-item:nth-child(4n) {
 .services p {
   margin-bottom: 30px;
 }
-
+.tabs__caption {
+  list-style: none;
+}
+.tabs__content {
+  display: none; /* по умолчанию прячем все блоки */
+}
+.tabs__content.active {
+  display: block; /* по умолчанию показываем нужный блок */
+}
 .services-item {
   display: none;
   position: absolute;
@@ -1710,6 +1718,7 @@ a.services-item-link {
   background-color: #32425c;
 
   border-top: 1px solid #4d637b;
+  cursor: pointer;
 }
 a:hover.services-item-link,
 a:focus.services-item-link,
@@ -2303,6 +2312,12 @@ button:active.send-button {
   padding-bottom: 80px;
 
   background-color: #ffffff;
+}
+.modal__oder {
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 17px;
 }
 .added p {
   position: relative;

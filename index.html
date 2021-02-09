@@ -112,7 +112,7 @@
 						<p class="popular-goods-oldprice">32500 Р.</p>
 						<p class="popular-goods-discount">25500 Р.</p>
 						<div class="actions">
-							<a class="button popular-goods-checkout">Купить</a>
+							<a class="button popular-goods-checkout" href="#added">Купить</a>
 							<a class="button popular-goods-bookmarks" href="#">В закладки</a>
 						</div>
 					</li>
@@ -122,7 +122,7 @@
 						<p class="popular-goods-oldprice">22500 Р.</p>
 						<p class="popular-goods-discount">15500 Р.</p>
 						<div class="actions">
-							<a class="button popular-goods-checkout">Купить</a>
+							<a class="button popular-goods-checkout" href="#added">Купить</a>
 							<a class="button popular-goods-bookmarks" href="#">В закладки</a>
 						</div>
 					</li>
@@ -132,7 +132,7 @@
 						<p class="popular-goods-oldprice">30500 Р.</p>
 						<p class="popular-goods-discount">25500 Р.</p>
 						<div class="actions">
-							<a class="button popular-goods-checkout">Купить</a>
+							<a class="button popular-goods-checkout" href="#added">Купить</a>
 							<a class="button popular-goods-bookmarks" href="#">В закладки</a>
 						</div>
 					</li>
@@ -142,7 +142,7 @@
 						<p class="popular-goods-oldprice"></p>
 						<p class="popular-goods-discount">12500 Р.</p>
 						<div class="actions">
-							<a class="button popular-goods-checkout">Купить</a>
+							<a class="button popular-goods-checkout" href="#added">Купить</a>
 							<a class="button popular-goods-bookmarks" href="#">В закладки</a>
 						</div>
 					</li>
@@ -170,24 +170,27 @@
 				<h2>Сервисы</h2>
 				<p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
 				Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-				<ul class="services-list">
-						<a href="#" class="services-item-link delivery-link">Доставка</a>
-						<a href="#" class="services-item-link warranty-link active">Гарантия</a>
-						<a href="#" class="services-item-link credit-link">Кредит</a>
-					<li class="services-item" id="delivery">
+	
+				<div class="services-list tabs">
+						<ul class="tabs__caption">
+							<li><a class="services-item-link delivery-link">Доставка</a></li>
+							<li class="active"><a class="services-item-link warranty-link">Гарантия</a></li>
+							<li><a class="services-item-link credit-link">Кредит</a></li>
+						</ul>
+					<div class="services-item tabs__content" id="delivery">
 						<h3>Доставка</h3>
 						<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
-					</li>
-					<li class="services-item active" id="warranty">
+					</div>
+					<div class="services-item active tabs__content" id="warranty">
 						<h3>Гарантия</h3>
 						<p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. <br>Дом уж восстановите как-нибудь сами.</p>
-					</li>
-					<li class="services-item" id="credit">
+					</div>
+					<div class="services-item tabs__content" id="credit">
 						<h3>Кредит</h3>
 						<p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
 						<a class="button request red-button" href="#">Отправить заявку</a>
-					</li>
-				</ul>
+					</div>
+				</div>
 				
 			</div>
 		</section>
@@ -261,14 +264,19 @@
 		</div>
 	</div>
 	</footer>
-	<section class="modal added">
+
+	<section class="modal added" id="added">
 		<div class="added-wrapper">
+			<div class="modal__oder">
+				<div>Ваш заказ:</div>
+				<div class="modal__category"></div>
+				<div class="modal__model"></div>
+			</div>
 			<p>Товар добавлен в корзину!</p>
 		</div>	
 			<a class="checkout" href="#">Оформить заказ</a>
 			<a class="proceed-button" href="#">Продолжить покупки</a>
-			<button class="modal-close added-close" type="button">Закрыть</button>
-		
+			<button onclick="document.location='#show-modal'" class="modal-close added-close" type="button">Закрыть</button>		
 	</section>
 	
 	<section class="modal modal-login">
@@ -322,7 +330,8 @@
 		</p>
 		<button class="modal-close" type="button">Закрыть</button>
 	</section>
-
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="js/tiny-slider.js"></script>
 <script src="js/popup.js"></script>
 </body>

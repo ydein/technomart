@@ -1,3 +1,29 @@
+	
+
+	$(document).ready(function(){
+	$('.popular-goods-checkout').each(function(i) {
+        $(this).on('click', function() {
+            $('#added .modal__category').text($('.popular-goods-item-category').eq(i).text());
+            $('#added .modal__model').text($('.popular-goods-item-model').eq(i).text());
+        })
+
+    });
+
+	(function($) {
+	$(function() {
+	  
+	  $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+	    $(this)
+	      .addClass('active').siblings().removeClass('active')
+	      .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+	  });
+	  
+	});
+	})(jQuery);
+
+	});
+
+
 	var link = document.querySelector(".login-link");
 	var popup = document.querySelector(".modal-login");
 	var close = popup.querySelector(".modal-close");
@@ -95,30 +121,6 @@
 	});
 
 
-/*	
-	var addedLink = document.querySelector(".popular-goods-checkout");
-	var addedPopup = document.querySelector(".added");
-	var addedClose = addedPopup.querySelector(".modal-close");	
-
-	addedLink.addEventListener("click", function(evt) {
-		evt.preventDefault();
-		addedPopup.classList.add("modal-show");
-	});
-
-	addedClose.addEventListener("click", function(evt) {
-		evt.preventDefault();
-		addedPopup.classList.remove("modal-show");
-	});
-
-	window.addEventListener("keydown", function(evt) {
-		evt.preventDefault();
-		if (evt.keyCode === 27) {
-			if (addedPopup.classList.contains("modal-show")) {
-				addedPopup.classList.remove("modal-show");					
-			}
-		}
-	});
-	*/
 
 	//Tiny-slider
 	  var slider = tns({
@@ -129,3 +131,4 @@
     mode: "gallery",
     controlsPosition: 'bottom'
   });
+
